@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cộng đồng – Football Fan Zone</title>
+<meta name="description" content="Football Fan Zone – tin tức, lịch thi đấu, cộng đồng và quiz dành cho người yêu bóng đá.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚽</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="container community-wrap">
+  <h1 class="page-title">Cộng đồng<small>Chia sẻ ý kiến, đặt câu hỏi, cổ vũ đội bóng của bạn</small></h1>
+  <form class="card composer" id="postForm">
+    <textarea id="postContent" maxlength="500" placeholder="Bạn nghĩ gì về vòng đấu vừa rồi?"></textarea>
+    <div class="composer-row">
+      <select id="postTag">
+        <option>Bình luận</option><option>Câu hỏi</option><option>Ủng hộ</option><option>Phê bình</option>
+      </select>
+      <span class="count" id="postCount">0/500</span>
+      <button class="btn" type="submit">ĐĂNG</button>
+    </div>
+  </form>
+  <div class="toolbar" style="margin-top:22px">
+    <div class="chips" id="postFilters"></div>
+    <select id="postSort" style="max-width:180px">
+      <option value="new">Mới nhất</option><option value="hot">Nhiều thích nhất</option>
+    </select>
+  </div>
+  <div id="postList"></div>
+</main>
+<script src="data.js"></script>
+<script src="common.js"></script>
+<script src="community.js"></script>
+</body>
+</html>
